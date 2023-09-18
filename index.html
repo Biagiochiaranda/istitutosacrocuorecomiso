@@ -11,7 +11,6 @@
 <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
     body {
     font-family: "Times New Roman", Georgia, Serif;
@@ -24,7 +23,8 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Pacifico", cursive; /* Utilizzo del font Pacifico per gli header */
     letter-spacing: 5px;
 }
-    .w3-top {
+
+.w3-top {
     position: sticky;
     top: 0;
     font-family: "Pacifico", cursive; /* Usa il font Pacifico per la navbar */
@@ -40,50 +40,97 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #f15a4f; /* Cambia il colore al passaggio del mouse */
 }
 
-    /* Centra il contenuto nella pagina */
-    .content {
-        max-width: 800px;
-        margin: 0 auto;
-        text-align: left; /* Allinea il testo a sinistra all'interno del contenitore centrato */
-    }
+/* Centra il contenuto nella pagina */
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left; /* Allinea il testo a sinistra all'interno del contenitore centrato */
+}
 
-    /* Centra il testo */
-    .center-text {
-        text-align: center;
-    }
+/* Centra il testo */
+.center-text {
+    text-align: center;
+}
 
-    /* Stile per il modulo di contatto */
-    .contact-form {
-        text-align: left;
-    }
-     /* Stile per le immagini a larghezza completa su schermi larghi */
-    @media screen and (min-width: 450px) {
-        .full-width-img {
-            margin: auto;
-            width: 90%;
-        }
-    }
+/* Stile per il modulo di contatto */
+.contact-form {
+    text-align: left;
+}
+
+/* Stile per il menu ad hamburger su dispositivi mobili */
+.w3-sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.w3-sidebar a {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.w3-sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.w3-sidebar .close-button {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    padding: 10px;
+    z-index: 2;
+}
+
+/* Icona per aprire il menu ad hamburger */
+.open-nav {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.open-nav:hover {
+    color: #ee3123; /* Cambia il colore al passaggio del mouse */
+}
+
+/* Stile per il menu ad hamburger quando è aperto */
+.w3-sidebar.open {
+    width: 250px;
+}
 </style>
 </head>
-
-<!-- Navbar (sit on top) -->
-    <!-- Navbar (sit on top) -->
-    <div class="w3-top">
-        <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
-            <a href="#home" class="w3-bar-item w3-button">Istituto Sacro Cuore Comiso</a>
-            <!-- Right-sided navbar links. Hide them on small screens -->
-            <div class="w3-right w3-hide-small">
-                <a href="index.html" class="w3-bar-item w3-black w3-button">Home</a>
-                <a href="attività.html" class="w3-bar-item w3-button">Le nostre attività</a>
-                <a href="blog.html" class="w3-bar-item  w3-button">Blog e pubblicazioni documenti</a>
-                <a href="#contact" class="w3-bar-item w3-button">Contatti</a>
-            </div>
-        </div>
-    </div>
-<head>
 <body>
 
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+    <!-- Icona per aprire il menu ad hamburger -->
+    <span class="open-nav" onclick="openNav()">&#9776;</span>
+    <div class="w3-bar w3-white" style="letter-spacing:4px;">
+        <a href="#home" class="w3-bar-item w3-button">Istituto Sacro Cuore Comiso</a>
+    </div>
+</div>
 
+<!-- Menu ad hamburger (sidenav) -->
+<div id="mySidenav" class="w3-sidebar">
+    <!-- Icona per chiudere il menu ad hamburger -->
+    <a href="javascript:void(0)" class="close-button" onclick="closeNav()">&times;</a>
+    <!-- Link del menu -->
+    <a href="index.html">Home</a>
+    <a href="attività.html">Le nostre attività</a>
+    <a href="blog.html">Blog e pubblicazioni documenti</a>
+    <a href="#contact">Contatti</a>
+</div>
+
+<!-- Resto del contenuto -->
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:500px;min-width:500px" id="home">
   <img class="w3-image" src="Foto1.jpg" alt="Istituto Sacro Cuore" width="500" height="800">
@@ -198,7 +245,6 @@ h1, h2, h3, h4, h5, h6 {
       <h3>Marialisa Cascone</h3>
       <p class="w3-opacity">Ruolo</p>
       <p>Desc</p>
-      
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <img src="/w3images/team4.jpg" alt="Dan" style="width:100%">
@@ -264,3 +310,15 @@ h1, h2, h3, h4, h5, h6 {
 <footer class="w3-center w3-light-grey w3-padding-32">
   <p> Realizzato da <a href="" title="" target="" class="w3-hover-text">Biagio Chiarandà</a></p>
 </footer>
+
+<!-- Script per aprire e chiudere il menu ad hamburger -->
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+</html>
