@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Istituto Sacro Cuore Comiso</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Nel tuo file HTML, nell'elemento head -->
+<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<style>
+        body {
+    font-family: "Times New Roman", Georgia, Serif;
+    text-align: center;
+    background-color: #fcd6d3; /* Colore di sfondo */
+    color: #000; /* Colore del testo */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Pacifico", cursive; /* Utilizzo del font Pacifico per gli header */
+    letter-spacing: 5px;
+}
+    .w3-top {
+    position: sticky;
+    top: 0;
+    font-family: "Pacifico", cursive; /* Usa il font Pacifico per la navbar */
+    background-color: #ee3123; /* Colore di sfondo */
+    color: #fff; /* Colore del testo */
+}
+
+.w3-bar-item {
+    padding: 14px 16px;
+}
+
+.w3-bar-item:hover {
+    background-color: #f15a4f; /* Cambia il colore al passaggio del mouse */
+}
+
+    /* Centra il contenuto nella pagina */
+    .content {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: left; /* Allinea il testo a sinistra all'interno del contenitore centrato */
+    }
+
+    /* Centra il testo */
+    .center-text {
+        text-align: center;
+    }
+
+    /* Stile per il modulo di contatto */
+    .contact-form {
+        text-align: left;
+    }
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-items: center; /* Allinea le immagini al centro */
+}
+
+.gallery a {
+    text-decoration: none;
+    border: 2px solid #111;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.gallery img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+        <a href="#home" class="w3-bar-item w3-button">Istituto Sacro Cuore Comiso </a>
+        <!-- Right-sided navbar links. Hide them on small screens -->
+        <div class="w3-right w3-hide-small">
+            <a href="Sito.html" class="w3-bar-item w3-button">Home</a>
+            <a href="attività.html" class="w3-bar-item w3-black w3-button">Le nostre attività</a>
+            <a href="blog.html" class="w3-bar-item w3-button">Blog e pubblicazioni documenti</a>
+            <a href="#contact" class="w3-bar-item w3-button">Contatti</a>
+        </div>
+    </div>
+</div>
+<div class="w3-row-padding w3-center w3-padding-64" id="documentazione">
+    <h2>Galleria</h2>
+    <p class="w3-large w3-text-grey w3-hide-medium">Un'illustrazione delle varie attività che svolgiamo nella nostra scuola.</p>
+
+    <div class="gallery">
+        <a href="foto1.jpg" data-lightbox="gallery" data-title="Foto 1">
+            <img src="foto1.jpg" alt="Foto 1">
+        </a>
+        <a href="foto2.jpg" data-lightbox="gallery" data-title="Foto 2">
+            <img src="foto2.jpg" alt="Foto 2">
+        </a>
+        <a href="foto3.jpg" data-lightbox="gallery" data-title="Foto 3">
+            <img src="foto3.jpg" alt="Foto 3">
+        </a>
+        <a href="foto5.jpg" data-lightbox="gallery" data-title="Foto 4">
+            <img src="foto5.jpg" alt="Foto 4">
+        </a>
+        <a href="foto7.jpg" data-lightbox="gallery" data-title="Foto 5">
+            <img src="foto7.jpg" alt="Foto 5">
+        </a>
+        <a href="foto9.jpg" data-lightbox="gallery" data-title="Foto 6">
+            <img src="foto9.jpg" alt="Foto 6">
+        </a>
+    </div>
+    <!-- Contact Section -->
+<div class="w3-container w3-padding-32" id="contact">
+    <div class="w3-row">
+        <div class="w3-col m2">&nbsp;</div> <!-- Spazio vuoto a sinistra -->
+        <div class="w3-col m8">
+            <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contattaci</h3>
+            <div class="w3-large w3-margin-bottom">
+                <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Via Principe di Piemonte 55, Comiso<br>
+                <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> 0932961644<br>
+                <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> istitutosacrocuorecomiso@virgilio.it<br>
+            </div>
+            <form action="/action_page.php" target="_blank">
+                <input class="w3-input w3-border" type="text" placeholder="Nome" required name="Nome">
+                <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email">
+                <input class="w3-input w3-section w3-border" type="text" placeholder="Inserire l'oggetto" required name="Oggetto">
+                <input class="w3-input w3-section w3-border" type="text" placeholder="Messaggio" required name="Comment">
+                <button class="w3-button w3-black w3-section" type="submit">
+                    <i class="fa fa-paper-plane"></i> Invia
+                </button>
+            </form>
+        </div>
+        <div class="w3-col m2">&nbsp;</div> <!-- Spazio vuoto a destra -->
+    </div>
+</div>
+
+<script src="lightbox2/js/lightbox.min.js"></script>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d398.5650096899044!2d14.609789632268418!3d36.94963404880955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sit!2sit!4v1694693724321!5m2!1sit!2sit" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<h2>Veniteci a trovare!</h2>
+<p>Lun - Ven: 8:15 - 15:30</p>
+<p>Sabato: 8:15 - 12.</p>
+<p>Chiuso la domenica.</p>
+</div>
+<hr>
+</body>
+</html>
