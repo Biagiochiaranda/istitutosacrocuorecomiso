@@ -24,7 +24,8 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Pacifico", cursive; /* Utilizzo del font Pacifico per gli header */
     letter-spacing: 5px;
 }
-    .w3-top {
+
+.w3-top {
     position: sticky;
     top: 0;
     font-family: "Pacifico", cursive; /* Usa il font Pacifico per la navbar */
@@ -40,220 +41,261 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #f15a4f; /* Cambia il colore al passaggio del mouse */
 }
 
-    /* Centra il contenuto nella pagina */
-    .content {
-        max-width: 800px;
-        margin: 0 auto;
-        text-align: left; /* Allinea il testo a sinistra all'interno del contenitore centrato */
+/* Centra il contenuto nella pagina */
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left; /* Allinea il testo a sinistra all'interno del contenitore centrato */
+}
+
+/* Centra il testo */
+.center-text {
+    text-align: center;
+}
+
+/* Stile per il modulo di contatto */
+.contact-form {
+    text-align: left;
+}
+
+/* Media query per dispositivi mobili */
+@media (max-width: 768px) {
+    /* Aggiungi qui le modifiche per dispositivi mobili */
+    body {
+        font-size: 16px; /* Esempio di riduzione della dimensione del testo per dispositivi mobili */
     }
 
-    /* Centra il testo */
-    .center-text {
-        text-align: center;
+    /* Modifica la dimensione delle immagini per dispositivi mobili */
+    img.w3-image {
+        width: 100%; /* Le immagini occupano tutta la larghezza del loro contenitore */
+        height: auto; /* Altezza automatica per mantenere le proporzioni originali */
     }
 
-    /* Stile per il modulo di contatto */
-    .contact-form {
-        text-align: left;
+    /* Nascondi il testo della barra di navigazione su dispositivi mobili */
+    .w3-right.w3-hide-small {
+        display: none;
     }
+
+    /* Modifica lo stile del menu di navigazione su dispositivi mobili */
+    .w3-bar-item.w3-button {
+        padding: 8px 16px; /* Riduci il padding dei pulsanti */
+    }
+}
 </style>
 </head>
+<body>
 
 <!-- Navbar (sit on top) -->
-    <!-- Navbar (sit on top) -->
-    <div class="w3-top">
-        <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
-            <a href="#home" class="w3-bar-item w3-button">Istituto Sacro Cuore Comiso</a>
-            <!-- Right-sided navbar links. Hide them on small screens -->
-            <div class="w3-right w3-hide-small">
-                <a href="index.html" class="w3-bar-item w3-black w3-button">Home</a>
-                <a href="attività.html" class="w3-bar-item w3-button">Le nostre attività</a>
-                <a href="blog.html" class="w3-bar-item  w3-button">Blog e pubblicazioni documenti</a>
-                <a href="#contact" class="w3-bar-item w3-button">Contatti</a>
-            </div>
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+        <a href="#home" class="w3-bar-item w3-button">Istituto Sacro Cuore Comiso</a>
+        <!-- Menu a discesa per dispositivi mobili -->
+        <div class="w3-right w3-hide-large">
+            <button class="w3-bar-item w3-button w3-hover-black" onclick="toggleMenu()">Menu <i class="fa fa-bars"></i></button>
+        </div>
+        <!-- Right-sided navbar links. Hide them on small screens -->
+        <div class="w3-right w3-hide-small">
+            <a href="index.html" class="w3-bar-item w3-black w3-button">Home</a>
+            <a href="attività.html" class="w3-bar-item w3-button">Le nostre attività</a>
+            <a href="blog.html" class="w3-bar-item  w3-button">Blog e pubblicazioni documenti</a>
+            <a href="#contact" class="w3-bar-item w3-button">Contatti</a>
         </div>
     </div>
-<head>
-<body>
+</div>
+
 
 
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:500px;min-width:500px" id="home">
-  <img class="w3-image" src="Foto1.jpg" alt="Istituto Sacro Cuore" width="500" height="800">
-  <div class="w3-display-bottomleft w3-padding-large w3-opacity">
-  </div>
-</header>
-
-<!-- Page content -->
-<div class="w3-content" style="max-width:1100px">
-
-  <!-- About Section -->
-  <div class="w3-row w3-padding-64" id="about">
-    <div class="w3-col m6 w3-padding-large w3-hide-small">
-     <img src="/w3images/tablesetting2.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+    <img class="w3-image" src="Foto1.jpg" alt="Istituto Sacro Cuore" width="500" height="800">
+    <div class="w3-display-bottomleft w3-padding-large w3-opacity">
     </div>
-
-    <div class="w3-col m6 w3-padding-large">
-      <h1 class="w3-center">
-        Benvenuti alla Scuola Materna dell'Istituto Sacro Cuore!</h1><br>
-      <h5 class="w3-center">Tradition since 1889</h5>
-        Siamo entusiasti di darvi il benvenuto nella nostra accogliente e premurosa scuola materna, situata a Comiso, presso l'Istituto Sacro Cuore. Qui alla nostra scuola, ci impegniamo ogni giorno a creare un ambiente sicuro e stimolante in cui i bambini possono crescere, imparare e svilupparsi.
-      <p class="w3-large w3-text-grey w3-hide-medium">La Scuola Materna dell'Istituto Sacro Cuore è un luogo speciale dedicato ai più piccoli. Siamo orgogliosi di avere una lunga tradizione nell'educazione dell'infanzia, basata su valori di amore, rispetto e cura. Il nostro staff altamente qualificato è composto da insegnanti dedicati e appassionati che si impegnano a promuovere lo sviluppo completo di ogni bambino. </p>
-    </div>
-  </div>
+  </header>
   
-  <hr>
+  <!-- Page content -->
+  <div class="w3-content" style="max-width:1100px">
   
- <!-- First Photo Grid-->
- <div class="w3-container align-center" style="text-align: center;">
-    <h1><b>I nostri programmi educativi</b></h1>
-    <p>Impara giocando</p>
- <div class="w3-row-padding">
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="foto2.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Gioco immaginativo
-        </b></p>
-        <p>Il nostro Gioco immaginativo è il più recente e richiesto, per cui ha una disponibilità limitata. </p>
+    <!-- About Section -->
+    <div class="w3-row w3-padding-64" id="about">
+      <div class="w3-col m6 w3-padding-large w3-hide-small">
+       <img src="/w3images/tablesetting2.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
       </div>
-    </div>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="foto3.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Gioco all'aria aperta</b></p>
-        <p>Il nostro Gioco all'aria aperta riesce ad adattarsi ai tuoi orari, immersi nel nostro meraviglioso cortile e giardino Qualunque siano le esigenze del tuo bambino, ciascun programma offre il sostegno e gli strumenti necessari per una crescita ottimale.</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container">
-      <img src="foto4.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Lezioni di arte</b></p>
-        <p>Le nostre lezioni di arte sono la soluzione ideale per stimolare la creatività dei bambini e sviluppare la consapevolezza delle emozioni.</p>
-      </div>
-    </div>
-  </div>
   
-  <!-- Second Photo Grid-->
-  <div class="w3-row-padding">
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="foto5.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Laboratorio Musicale</b></p>
-        <p>Il nostro laboratorio musicale offre un prezioso percorso di apprendimento e scoperta per i bambini, stimolando la creatività, la coordinazione e la gioia nell'apprendimento fin dai primi passi nella scuola materna.</p>
+      <div class="w3-col m6 w3-padding-large">
+        <h1 class="w3-center">
+          Benvenuti alla Scuola Materna dell'Istituto Sacro Cuore!</h1><br>
+        <h5 class="w3-center">Tradition since 1889</h5>
+          Siamo entusiasti di darvi il benvenuto nella nostra accogliente e premurosa scuola materna, situata a Comiso, presso l'Istituto Sacro Cuore. Qui alla nostra scuola, ci impegniamo ogni giorno a creare un ambiente sicuro e stimolante in cui i bambini possono crescere, imparare e svilupparsi.
+        <p class="w3-large w3-text-grey w3-hide-medium">La Scuola Materna dell'Istituto Sacro Cuore è un luogo speciale dedicato ai più piccoli. Siamo orgogliosi di avere una lunga tradizione nell'educazione dell'infanzia, basata su valori di amore, rispetto e cura. Il nostro staff altamente qualificato è composto da insegnanti dedicati e appassionati che si impegnano a promuovere lo sviluppo completo di ogni bambino. </p>
       </div>
     </div>
     
-    <div class="w3-third w3-container w3-margin-bottom">
-        <img src="foto6.jpg" alt="Norway" style="width:80%" class="w3-hover-opacity">
+    <hr>
+    
+   <!-- First Photo Grid-->
+   <div class="w3-container align-center" style="text-align: center;">
+      <h1><b>I nostri programmi educativi</b></h1>
+      <p>Impara giocando</p>
+   <div class="w3-row-padding">
+      <div class="w3-third w3-container w3-margin-bottom">
+        <img src="foto2.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
         <div class="w3-container w3-white">
-          <p><b>
-              Religione Cattolica</b></p>
-          <p>Il nostro Istituto in quanto ente religioso pone l'importanza di trasmettere valori religiosi e solidali.</p>
+          <p><b>Gioco immaginativo
+          </b></p>
+          <p>Il nostro Gioco immaginativo è il più recente e richiesto, per cui ha una disponibilità limitata. </p>
         </div>
       </div>
       <div class="w3-third w3-container w3-margin-bottom">
-        <img src="foto8.jpg" alt="Norway" style="width:80%" class="w3-hover-opacity">
+        <img src="foto3.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
         <div class="w3-container w3-white">
-          <p><b>
-               Imparando l'inglese</b></p>
-          <p>L'apprendimento dell'inglese alla scuola materna apre porte a un mondo di opportunità. Promuovendo la comunicazione globale e la mentalità aperta, prepariamo i nostri piccoli studenti per il futuro, fin dai primi passi.</p>
+          <p><b>Gioco all'aria aperta</b></p>
+          <p>Il nostro Gioco all'aria aperta riesce ad adattarsi ai tuoi orari, immersi nel nostro meraviglioso cortile e giardino Qualunque siano le esigenze del tuo bambino, ciascun programma offre il sostegno e gli strumenti necessari per una crescita ottimale.</p>
+        </div>
+      </div>
+      <div class="w3-third w3-container">
+        <img src="foto4.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <p><b>Lezioni di arte</b></p>
+          <p>Le nostre lezioni di arte sono la soluzione ideale per stimolare la creatività dei bambini e sviluppare la consapevolezza delle emozioni.</p>
         </div>
       </div>
     </div>
-  </div>
-
-
-  <hr>
-
-  <!-- Contact Section -->
- <!-- About Section -->
- <div class="w3-container w3-padding-32" id="about">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Il nostro staff</h3>
-    <p>Le nostre maestre alla scuola materna sono una squadra di professioniste altamente qualificate e dedite, con un'unica ma speciale eccezione: una di loro è anche una suora. Ogni maestra condivide una profonda passione per l'educazione dei bambini, lavorando con impegno per fornire un ambiente di apprendimento amorevole e stimolante. La presenza delle suore nella nostra squadra aggiunge una dimensione unica di valori, dedizione e spiritualità alla nostra comunità educativa, contribuendo a formare non solo menti curiose, ma anche cuori generosi e compassionevoli.
-    </p>
-  </div>
-
-  <div class="w3-row-padding w3-grayscale">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="/w3images/team2.jpg" alt="John" style="width:100%">
-      <h3>Suor Marie Victoire</h3>
-      <p class="w3-opacity">Ruolo</p>
-      <p>desc</p>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
-      <h3>Manuela Iacono</h3>
-      <p class="w3-opacity">Ruolo</p>
-      <p>desc</p>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="/w3images/team3.jpg" alt="Mike" style="width:100%">
-      <h3>Marialisa Cascone</h3>
-      <p class="w3-opacity">Ruolo</p>
-      <p>Desc</p>
-      
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="/w3images/team4.jpg" alt="Dan" style="width:100%">
-      <h3>Suor Joy</h3>
-      <p class="w3-opacity">Ruolo</p>
-      <p>desc</p>
-    </div>
-  </div>
-
-  <hr>
-  
- <!-- About Section -->
- <div class="w3-row w3-padding-64" id="menu">
-    <div class="w3-col l6 w3-padding-large">
-     <img src="foto9.jpg" class="w3-round w3-image " alt="Table Setting" width="600" height="750">
-    </div>
-
-    <div class="w3-col m6 w3-padding-large">
-      <h1 class="w3-center">La nostra missione</h1><br>
-      <h5 class="w3-center">Un'esperienza unica e preziosa</h5>
-      <p class="w3-large">Reputiamo che lo sviluppo dei bambini sia favorito da un ambiente che valorizzi la loro unicità, fornendo il sostegno necessario così come opportunità di crescita sul piano emotivo, sociale e creativo. A partire dai loro punti di forza, interessi e curiosità, guidiamo i bambini a esplorare l'ambiente che li circonda, a sviluppare nuove abilità e a creare relazioni solide.</p>
-    </div>
-  </div>
-
-  <hr>
-    <!-- Contact Section -->
-<div class="w3-container w3-padding-32" id="contact">
-    <div class="w3-row">
-        <div class="w3-col m2">&nbsp;</div> <!-- Spazio vuoto a sinistra -->
-        <div class="w3-col m8">
-            <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contattaci</h3>
-            <div class="w3-large w3-margin-bottom">
-                <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Via Principe di Piemonte 55, Comiso<br>
-                <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> 0932961644<br>
-                <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> istitutosacrocuorecomiso@virgilio.it<br>
-            </div>
-            <form action="/action_page.php" target="_blank">
-                <input class="w3-input w3-border" type="text" placeholder="Nome" required name="Nome">
-                <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email">
-                <input class="w3-input w3-section w3-border" type="text" placeholder="Inserire l'oggetto" required name="Oggetto">
-                <input class="w3-input w3-section w3-border" type="text" placeholder="Messaggio" required name="Comment">
-                <button class="w3-button w3-black w3-section" type="submit">
-                    <i class="fa fa-paper-plane"></i> Invia
-                </button>
-            </form>
+    
+    <!-- Second Photo Grid-->
+    <div class="w3-row-padding">
+      <div class="w3-third w3-container w3-margin-bottom">
+        <img src="foto5.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <p><b>Laboratorio Musicale</b></p>
+          <p>Il nostro laboratorio musicale offre un prezioso percorso di apprendimento e scoperta per i bambini, stimolando la creatività, la coordinazione e la gioia nell'apprendimento fin dai primi passi nella scuola materna.</p>
         </div>
-        <div class="w3-col m2">&nbsp;</div> <!-- Spazio vuoto a destra -->
+      </div>
+      
+      <div class="w3-third w3-container w3-margin-bottom">
+          <img src="foto6.jpg" alt="Norway" style="width:80%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>
+                Religione Cattolica</b></p>
+            <p>Il nostro Istituto in quanto ente religioso pone l'importanza di trasmettere valori religiosi e solidali.</p>
+          </div>
+        </div>
+        <div class="w3-third w3-container w3-margin-bottom">
+          <img src="foto8.jpg" alt="Norway" style="width:80%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>
+                 Imparando l'inglese</b></p>
+            <p>L'apprendimento dell'inglese alla scuola materna apre porte a un mondo di opportunità. Promuovendo la comunicazione globale e la mentalità aperta, prepariamo i nostri piccoli studenti per il futuro, fin dai primi passi.</p>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
+  
+  
+    <hr>
+  
+    <!-- Contact Section -->
+   <!-- About Section -->
+   <div class="w3-container w3-padding-32" id="about">
+      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Il nostro staff</h3>
+      <p>Le nostre maestre alla scuola materna sono una squadra di professioniste altamente qualificate e dedite, con un'unica ma speciale eccezione: una di loro è anche una suora. Ogni maestra condivide una profonda passione per l'educazione dei bambini, lavorando con impegno per fornire un ambiente di apprendimento amorevole e stimolante. La presenza delle suore nella nostra squadra aggiunge una dimensione unica di valori, dedizione e spiritualità alla nostra comunità educativa, contribuendo a formare non solo menti curiose, ma anche cuori generosi e compassionevoli.
+      </p>
+    </div>
+  
+    <div class="w3-row-padding w3-grayscale">
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <img src="/w3images/team2.jpg" alt="John" style="width:100%">
+        <h3>Suor Marie Victoire</h3>
+        <p class="w3-opacity">Ruolo</p>
+        <p>desc</p>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
+        <h3>Manuela Iacono</h3>
+        <p class="w3-opacity">Ruolo</p>
+        <p>desc</p>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <img src="/w3images/team3.jpg" alt="Mike" style="width:100%">
+        <h3>Marialisa Cascone</h3>
+        <p class="w3-opacity">Ruolo</p>
+        <p>Desc</p>
+        
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <img src="/w3images/team4.jpg" alt="Dan" style="width:100%">
+        <h3>Suor Joy</h3>
+        <p class="w3-opacity">Ruolo</p>
+        <p>desc</p>
+      </div>
+    </div>
+  
+    <hr>
+    
+   <!-- About Section -->
+   <div class="w3-row w3-padding-64" id="menu">
+      <div class="w3-col l6 w3-padding-large">
+       <img src="foto9.jpg" class="w3-round w3-image " alt="Table Setting" width="600" height="750">
+      </div>
+  
+      <div class="w3-col m6 w3-padding-large">
+        <h1 class="w3-center">La nostra missione</h1><br>
+        <h5 class="w3-center">Un'esperienza unica e preziosa</h5>
+        <p class="w3-large">Reputiamo che lo sviluppo dei bambini sia favorito da un ambiente che valorizzi la loro unicità, fornendo il sostegno necessario così come opportunità di crescita sul piano emotivo, sociale e creativo. A partire dai loro punti di forza, interessi e curiosità, guidiamo i bambini a esplorare l'ambiente che li circonda, a sviluppare nuove abilità e a creare relazioni solide.</p>
+      </div>
+    </div>
+  
+    <hr>
+      <!-- Contact Section -->
+  <div class="w3-container w3-padding-32" id="contact">
+      <div class="w3-row">
+          <div class="w3-col m2">&nbsp;</div> <!-- Spazio vuoto a sinistra -->
+          <div class="w3-col m8">
+              <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contattaci</h3>
+              <div class="w3-large w3-margin-bottom">
+                  <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Via Principe di Piemonte 55, Comiso<br>
+                  <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> 0932961644<br>
+                  <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> istitutosacrocuorecomiso@virgilio.it<br>
+              </div>
+              <form action="/action_page.php" target="_blank">
+                  <input class="w3-input w3-border" type="text" placeholder="Nome" required name="Nome">
+                  <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email">
+                  <input class="w3-input w3-section w3-border" type="text" placeholder="Inserire l'oggetto" required name="Oggetto">
+                  <input class="w3-input w3-section w3-border" type="text" placeholder="Messaggio" required name="Comment">
+                  <button class="w3-button w3-black w3-section" type="submit">
+                      <i class="fa fa-paper-plane"></i> Invia
+                  </button>
+              </form>
+          </div>
+          <div class="w3-col m2">&nbsp;</div> <!-- Spazio vuoto a destra -->
+      </div>
+  </div>
+  
+  
+  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d398.5650096899044!2d14.609789632268418!3d36.94963404880955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sit!2sit!4v1694693724321!5m2!1sit!2sit" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <h2>Veniteci a trovare!</h2>
+  <p>Lun - Ven: 8:15 - 15:30</p>
+  <p>Sabato: 8:15 - 12.</p>
+  <p>Chiuso la domenica.</p>
+  </div>
+  <hr>
+  </body>
+  </html>
+  
+  <!-- Footer -->
+  <footer class="w3-center w3-light-grey w3-padding-32">
+    <p> Realizzato da <a href="" title="" target="" class="w3-hover-text">Biagio Chiarandà</a></p>
+  </footer>
 
+<script>
+function toggleMenu() {
+    var x = document.getElementsByClassName("w3-right w3-hide-small")[0];
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}
+</script>
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d398.5650096899044!2d14.609789632268418!3d36.94963404880955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sit!2sit!4v1694693724321!5m2!1sit!2sit" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-<h2>Veniteci a trovare!</h2>
-<p>Lun - Ven: 8:15 - 15:30</p>
-<p>Sabato: 8:15 - 12.</p>
-<p>Chiuso la domenica.</p>
-</div>
-<hr>
 </body>
 </html>
-
-<!-- Footer -->
-<footer class="w3-center w3-light-grey w3-padding-32">
-  <p> Realizzato da <a href="" title="" target="" class="w3-hover-text">Biagio Chiarandà</a></p>
-</footer>
