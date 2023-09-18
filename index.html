@@ -1,87 +1,149 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Istituto Sacro Cuore Comiso</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!-- Nel tuo file HTML, nell'elemento head -->
-<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <title>Istituto Sacro Cuore Comiso</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Nel tuo file HTML, nell'elemento head -->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<style>
-    body {
-    font-family: "Times New Roman", Georgia, Serif;
-    text-align: center;
-    background-color: #fcd6d3; /* Colore di sfondo */
-    color: #000; /* Colore del testo */
-}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        body {
+            font-family: "Times New Roman", Georgia, Serif;
+            text-align: center;
+            background-color: #fcd6d3; /* Colore di sfondo */
+            color: #000; /* Colore del testo */
+            margin: 0;
+        }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Pacifico", cursive; /* Utilizzo del font Pacifico per gli header */
-    letter-spacing: 5px;
-}
+        h1, h2, h3, h4, h5, h6 {
+            font-family: "Pacifico", cursive; /* Utilizzo del font Pacifico per gli header */
+            letter-spacing: 5px;
+        }
 
-.w3-top {
-    position: sticky;
-    top: 0;
-    font-family: "Pacifico", cursive; /* Usa il font Pacifico per la navbar */
-    background-color: #ee3123; /* Colore di sfondo */
-    color: #fff; /* Colore del testo */
-}
+        .w3-top {
+            position: sticky;
+            top: 0;
+            font-family: "Pacifico", cursive; /* Usa il font Pacifico per la navbar */
+            background-color: #ee3123; /* Colore di sfondo */
+            color: #fff; /* Colore del testo */
+            z-index: 999;
+        }
 
-.w3-bar-item {
-    padding: 14px 16px;
-}
+        .w3-bar-item {
+            padding: 14px 16px;
+        }
 
-.w3-bar-item:hover {
-    background-color: #f15a4f; /* Cambia il colore al passaggio del mouse */
-}
+        .w3-bar-item:hover {
+            background-color: #f15a4f; /* Cambia il colore al passaggio del mouse */
+        }
 
-/* Centra il contenuto nella pagina */
-.content {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left; /* Allinea il testo a sinistra all'interno del contenitore centrato */
-}
+        /* Centra il contenuto nella pagina */
+        .content {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: left; /* Allinea il testo a sinistra all'interno del contenitore centrato */
+            padding: 20px;
+        }
 
-/* Centra il testo */
-.center-text {
-    text-align: center;
-}
+        /* Centra il testo */
+        .center-text {
+            text-align: center;
+        }
 
-/* Stile per il modulo di contatto */
-.contact-form {
-    text-align: left;
-}
+        /* Stile per il modulo di contatto */
+        .contact-form {
+            text-align: left;
+        }
 
-/* Media query per dispositivi mobili */
-@media (max-width: 768px) {
-    /* Aggiungi qui le modifiche per dispositivi mobili */
-    body {
-        font-size: 16px; /* Esempio di riduzione della dimensione del testo per dispositivi mobili */
-    }
+        /* Stili per le immagini responsive */
+        .responsive-img {
+            max-width: 100%;
+            height: auto;
+        }
 
-    /* Modifica la dimensione delle immagini per dispositivi mobili */
-    img.w3-image {
-        width: 100%; /* Le immagini occupano tutta la larghezza del loro contenitore */
-        height: auto; /* Altezza automatica per mantenere le proporzioni originali */
-    }
+        /* Stili per le colonne */
+        .w3-col {
+            width: 100%;
+            padding: 8px;
+        }
 
-    /* Nascondi il testo della barra di navigazione su dispositivi mobili */
-    .w3-right.w3-hide-small {
-        display: none;
-    }
+        /* Stili per i pulsanti */
+        .w3-button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
 
-    /* Modifica lo stile del menu di navigazione su dispositivi mobili */
-    .w3-bar-item.w3-button {
-        padding: 8px 16px; /* Riduci il padding dei pulsanti */
-    }
-}
-</style>
+        /* Stili per le intestazioni */
+        .w3-padding-32 {
+            padding: 32px;
+        }
+
+        /* Stili per i paragrafi */
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* Stili per il menu hamburger */
+        .hamburger-menu {
+            display: none;
+        }
+
+        .hamburger-menu a {
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        /* Stili per il menu a discesa */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            color: #000;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f15a4f;
+            color: #fff;
+        }
+
+        /* Media query per dispositivi mobili */
+        @media screen and (max-width: 768px) {
+            .w3-padding-32 {
+                padding: 16px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            /* Nascondi il menu principale e mostra il menu hamburger */
+            .w3-right.w3-hide-small {
+                display: none;
+            }
+
+            .hamburger-menu {
+                display: block;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -89,21 +151,21 @@ h1, h2, h3, h4, h5, h6 {
 <div class="w3-top">
     <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
         <a href="#home" class="w3-bar-item w3-button">Istituto Sacro Cuore Comiso</a>
-        <!-- Menu a discesa per dispositivi mobili -->
-        <div class="w3-right w3-hide-large">
-            <button class="w3-bar-item w3-button w3-hover-black" onclick="toggleMenu()">Menu <i class="fa fa-bars"></i></button>
-        </div>
-        <!-- Right-sided navbar links. Hide them on small screens -->
+        <!-- Menu principale per schermi più grandi -->
         <div class="w3-right w3-hide-small">
             <a href="index.html" class="w3-bar-item w3-black w3-button">Home</a>
             <a href="attività.html" class="w3-bar-item w3-button">Le nostre attività</a>
             <a href="blog.html" class="w3-bar-item  w3-button">Blog e pubblicazioni documenti</a>
             <a href="#contact" class="w3-bar-item w3-button">Contatti</a>
         </div>
+        <!-- Menu hamburger per dispositivi mobili -->
+        <div class="hamburger-menu w3-hide-medium w3-hide-large">
+            <a href="javascript:void(0);" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
     </div>
 </div>
-
-
 
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:500px;min-width:500px" id="home">
@@ -286,16 +348,16 @@ h1, h2, h3, h4, h5, h6 {
     <p> Realizzato da <a href="" title="" target="" class="w3-hover-text">Biagio Chiarandà</a></p>
   </footer>
 
-<script>
-function toggleMenu() {
-    var x = document.getElementsByClassName("w3-right w3-hide-small")[0];
-    if (x.style.display === "block") {
-        x.style.display = "none";
-    } else {
-        x.style.display = "block";
+  <script>
+    function toggleMenu() {
+        var x = document.getElementsByClassName("w3-right w3-hide-small")[0];
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
     }
-}
-</script>
+    </script>
 
 </body>
 </html>
