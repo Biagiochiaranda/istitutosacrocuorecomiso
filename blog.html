@@ -1,77 +1,135 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Istituto Sacro Cuore Comiso</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!-- Nel tuo file HTML, nell'elemento head -->
-<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <title>Istituto Sacro Cuore Comiso</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<style>
+  <!-- Altre librerie CSS e stili personalizzati -->
+
+  <style>
     body {
-    font-family: "Times New Roman", Georgia, Serif;
-    text-align: center;
-    background-color: #fcd6d3; /* Colore di sfondo */
-    color: #000; /* Colore del testo */
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Pacifico", cursive; /* Utilizzo del font Pacifico per gli header */
-    letter-spacing: 5px;
-}
-    .w3-top {
-    position: sticky;
-    top: 0;
-    font-family: "Pacifico", cursive; /* Usa il font Pacifico per la navbar */
-    background-color: #ee3123; /* Colore di sfondo */
-    color: #fff; /* Colore del testo */
-}
-
-.w3-bar-item {
-    padding: 14px 16px;
-}
-
-.w3-bar-item:hover {
-    background-color: #f15a4f; /* Cambia il colore al passaggio del mouse */
-}
-
-    /* Centra il contenuto nella pagina */
-    .content {
-        max-width: 800px;
-        margin: 0 auto;
-        text-align: left; /* Allinea il testo a sinistra all'interno del contenitore centrato */
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      text-align: center;
+      background-color: #fcd6d3;
+      color: #000;
+    }
+    h1, h2, h3 {
+    font-family: "Arial", sans-serif; /* Tipo di carattere di backup */
+    color: #000000; /* Colore dei titoli */
     }
 
-    /* Centra il testo */
-    .center-text {
-        text-align: center;
+    /* Rimuovi stili di larghezza fissa per il massimo livello di reattività */
+    header.w3-display-container {
+      max-width: none;
+      min-width: none;
     }
 
-    /* Stile per il modulo di contatto */
-    .contact-form {
+    .w3-content {
+      max-width: none;
+      min-width: none;
+    }
+
+    /* Altre modifiche CSS personalizzate per il rendering responsive */
+
+    /* Stili per la navbar mobile */
+    .navbar {
+      overflow: hidden;
+      background-color: #f8f8f8;
+    }
+
+    .navbar a {
+      float: left;
+      font-size: 16px;
+      display: block;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    .navbar a:hover {
+      background-color: #ddd;
+    }
+
+    .navbar .icon {
+      display: none;
+      float: right;
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 600px) {
+      .navbar a:not(:first-child) {
+        display: none;
+      }
+
+      .navbar a.icon {
+        float: right;
+        display: block;
+      }
+
+      .navbar.responsive {
+        position: relative;
+      }
+
+      .navbar.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      .navbar.responsive a {
+        float: none;
+        display: block;
         text-align: left;
+      }
     }
-    </style>
+  /* Stile per i campi del modulo */
+  input[type="text"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  /* Stile per il pulsante di invio */
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  /* Cambia il colore del pulsante al passaggio del mouse */
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+</style>
+  </style>
 </head>
+
 <body>
-    <!-- Navbar (sit on top) -->
-    <div class="w3-top">
-        <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
-            <a href="#home" class="w3-bar-item w3-button">Istituto Sacro Cuore Comiso</a>
-            <!-- Right-sided navbar links. Hide them on small screens -->
-            <div class="w3-right w3-hide-small">
-                <a href="index.html" class="w3-bar-item w3-button">Home</a>
-                <a href="attività.html" class="w3-bar-item w3-button">Le nostre attività</a>
-                <a href="blog.html" class="w3-bar-item w3-black w3-button">Blog e pubblicazioni documenti</a>
-                <a href="#contact" class="w3-bar-item w3-button">Contatti</a>
-            </div>
-        </div>
+  <!-- Navbar (sit on top) -->
+  <div class="navbar" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button">Istituto Sacro Cuore Comiso</a>
+    <div class="navbar-right">
+      <a href="index.html" class="w3-bar-item w3-button">Home</a>
+      <a href="attività.html" class="w3-bar-item w3-button">Le nostre attività</a>
+      <a href="blog.html" class="w3-bar-item w3-button">Blog e pubblicazioni documenti</a>
+      <a href="#contact" class="w3-bar-item w3-button">Contatti</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
     </div>
+  </div>
+
 
     <!-- Centra tutto il contenuto -->
     <div class="content">
