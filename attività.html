@@ -73,6 +73,21 @@
       .navbar.responsive {
         position: relative;
       }
+      .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* Crea 4 colonne per riga */
+      gap: 16px; /* Spazio tra le immagini */
+      }
+
+      .gallery a {
+      text-align: center;
+      text-decoration: none;
+      }
+
+      .gallery img {
+      width: 100%; /* Riempie la larghezza della cella della griglia */
+      height: auto; /* Mantiene l'aspetto proporzionato */
+      }
 
       .navbar.responsive a.icon {
         position: absolute;
